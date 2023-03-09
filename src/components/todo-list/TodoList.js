@@ -1,8 +1,15 @@
 import React from 'react'
+import './TodoList.css'
+const TodoList = ({todo,index,markTodo}) => {
 
-const TodoList = () => {
+
   return (
-    <div>TodoList</div>
+    <>
+<span style={{textDecoration: todo.isDone? "line-through": ""}} onClick={()=> markTodo(index)}>{todo.text}</span>
+
+<br />
+
+</>
   )
 }
 
